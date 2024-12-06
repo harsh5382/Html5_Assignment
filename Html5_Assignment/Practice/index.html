@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Multimedia and Shapes</title>
+</head>
+<body>
+    <h1>Audio and Video Example</h1>
+
+    <video width="320" height="240" controls muted loop autoplay>
+        <source src="../Practice/श्री_राम_रक्षा_स्तोत्र___सनातन_धर्म_की_जय_🥰🚩🙏__By_Amrendra_Prabhu_Ji_#hanuman_#sitaram_#iskon(1080p).mp4" type="video/mp4">
+
+    </video>
+
+    <audio controls loop autoplay muted>
+        <source src="../Practice/Tum_Prem_Ho__Reprise_.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <h1>Shapes Using Canvas</h1>
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;"></canvas>
+
+    <h1>Shapes Using SVG</h1>
+    <svg width="400" height="200" style="border:1px solid #000000;">
+
+        <rect x="10" y="10" width="100" height="50" fill="blue" />
+
+        <circle cx="200" cy="50" r="30" fill="green" />
+
+        <line x1="10" y1="150" x2="300" y2="150" stroke="red" stroke-width="2" />
+
+        <polygon points="120,160 140,120 160,160" fill="purple" />
+    </svg>
+
+    <script>
+
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(10, 10, 100, 50);
+
+
+        ctx.beginPath();
+        ctx.arc(200, 50, 30, 0, 2 * Math.PI);
+        ctx.fillStyle = 'green';
+        ctx.fill();
+
+        
+        ctx.beginPath();
+        ctx.moveTo(10, 150);
+        ctx.lineTo(300, 150);
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        
+        ctx.beginPath();
+        ctx.moveTo(120, 160);
+        ctx.lineTo(140, 120);
+        ctx.lineTo(160, 160);
+        ctx.closePath();
+        ctx.fillStyle = 'purple';
+        ctx.fill();
+    </script>
+</body>
+</html>
